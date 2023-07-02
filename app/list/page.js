@@ -1,19 +1,22 @@
 import { connectDB } from "@/util/database.js"
 import Link from "next/link";
+import DetailLink from "./DetailLink";
 
 export default async function List() {
   let db = (await connectDB).db('forum');
   let result = await db.collection('post').find().toArray();
-  console.log(result[0]._id)
+
 
   return (
     <div className="list-bg">
         {result.map((el,idx)=>{
             return(
                 <div className="list-item" key={idx}>
-                    <h4>{el.title}</h4>
+                    <Link prefetch={false} href={`/detail/${el._id}`}>
+                        <h4>{el.title}</h4>
+                    </Link>
+                    <DetailLink></DetailLink>
                     <p>{el.content}</p>
-                    <Link href={`/detail/${el._id}`}>상세페이지</Link>
                 </div>
                 )
         })}
