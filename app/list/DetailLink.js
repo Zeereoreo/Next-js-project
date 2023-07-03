@@ -4,10 +4,8 @@ import { useParams, usePathname, useRouter } from "next/navigation"
 
 export default function DetailLink(){
     let router = useRouter()
-    let a = usePathname()
-    let b = useParams()
     return (
-        <button onClick={()=>{ router.push()}}>버튼</button>
+        <button onClick={()=>{ router.push('/list')}}>버튼</button>
     )
 }
 
@@ -43,9 +41,9 @@ let a = usePathname()
 let b = useSearchParams()
 let c = useParams()
 
-usePathname() 쓰면 현재 URL 출력해주고 
+usePathname() 쓰면 현재 URL 출력 
 
-useSearchParams() 쓰면 search parameter (query string) 출력해주고
+useSearchParams() 쓰면 search parameter (query string) 출력
 
 useParams() 쓰면 [dynamic route]에 입력한내용 (URL 파라미터) 을 출력
 
