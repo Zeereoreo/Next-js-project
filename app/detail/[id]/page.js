@@ -3,7 +3,7 @@ import { ObjectId } from "mongodb";
 
 export default async function Detail(props){
     let db = (await connectDB).db('forum');
-    let result = await db.collection('post').findOne({ _id: new ObjectId(props.params.어쩌구)})
+    let result = await db.collection('post').findOne({ _id: new ObjectId(props.params.id)})
 
     return(
     <div>
