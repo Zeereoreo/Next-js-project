@@ -15,7 +15,7 @@ export default async function List() {
                     <Link prefetch={false} href={`/detail/${el._id}`}>
                         <h4>{el.title}</h4>
                     </Link>
-                    <DetailLink></DetailLink>
+                    <Link href={`/edit/${el._id}`}>수정</Link>
                     <p>{el.content}</p>
                 </div>
                 )
