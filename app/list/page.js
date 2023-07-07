@@ -1,3 +1,4 @@
+import ListItem from "./ListItem";
 import { connectDB } from "@/util/database.js"
 import Link from "next/link";
 import DetailLink from "./DetailLink";
@@ -9,17 +10,7 @@ export default async function List() {
 
   return (
     <div className="list-bg">
-        {result.map((el,idx)=>{
-            return(
-                <div className="list-item" key={idx}>
-                    <Link prefetch={false} href={`/detail/${el._id}`}>
-                        <h4>{el.title}</h4>
-                    </Link>
-                    <Link href={`/edit/${el._id}`}>수정</Link>
-                    <p>{el.content}</p>
-                </div>
-                )
-        })}
+        <ListItem result={result}></ListItem>
     </div>
   )
 }
