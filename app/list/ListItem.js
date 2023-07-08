@@ -20,13 +20,29 @@ export default function ListItem ({result}){
                     </Link>
                     <Link href={`/edit/${el._id}`}>수정</Link>
                     <p>{el.content}</p>
-                    <span onClick={()=>{
+                    <span onClick={(e)=>{
                         fetch('/api/post/delete', {method : 'DELETE', body : el._id})
+                        .then((r)=>r.json())
+                        .then(()=>{
+                            e.target.parentElement.style.opacity=0
+                            setTimeout(()=>{
+                                e.target.parentElement.style.display='none'
+                            },1000)
+                        })
                     }}>삭제</span>
+                    
                 </div>
                 )
         })}
         </div>
     )
+//1. query string 사용하기
 
+// fetch(/요청 url ?a=1&b=2&c=3) 
+// URL을 작성하면 서버로 {a:1, b:2, c:3} 이런 데이터가 전송
+
+//2. URL parameter 사용하기
+
+// /api/abc/아무문자 경로로 GET, POST 요청 등을 하는 경우 
+// [name].js 안의 코드가 실행
 }
