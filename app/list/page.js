@@ -17,9 +17,9 @@ export default async function List() {
   )
 }
 
-export default async function 페이지(){
-  let result = await fetch('/api/어쩌구', { cache: 'force-cache' })}
+// export default async function 페이지(){
+//   let result = await fetch('/api/어쩌구', { cache: 'force-cache' })}
 
-  fetch('/URL', { next: { revalidate: 60 } }) 
+//   fetch('/URL', { next: { revalidate: 60 } }) 
 
-  fetch('/URL', { cache: 'no-store' }) 
+//   fetch('/URL', { cache: 'no-store' }) 
