@@ -14,21 +14,20 @@ export const metadata = {
 }
 
 export default async function RootLayout({ children }) {
-  let session = await getServerSession(authOptions) // 로그인정보 출력
-  console.log(session)
+  let session = await getServerSession(authOptions)
   return (
-    <html lang="en">
-      <body className={inter.className}>
-      <div className="navbar"> 
+  <html lang="en">
+    <body className={inter.className}>
+    <div className="navbar"> 
     <Link href="/" className="logo">Appleforum</Link> 
     <Link href="/list">List</Link>
     { 
     session 
-      ? <span>{session.user.name} <LogOutBtn/> </span> 
-      : <LoginBtn></LoginBtn>
-  }
-</div>  
-        {children}</body>
-    </html>
+    ? <span>{session.user.name} <LogOutBtn/> </span> 
+    : <LoginBtn></LoginBtn> 
+    }
+    </div>  
+    {children}</body>
+  </html>
   )
 }
