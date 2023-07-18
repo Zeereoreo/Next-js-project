@@ -5,7 +5,7 @@ import ProjectItem from '@/components/projects/project-item'
 
 export default async function Projects(){
     const projects = await StaticData()
-
+    console.log(projects.results[0])
     return(
         <Layout>
             <div className='flex flex-col items-conter justify-center min-h-screen px-5 mb-10'>
@@ -14,9 +14,9 @@ export default async function Projects(){
                 <meta name='description' content='오늘도 화이팅'/>
                 <link rel='icon' href='/favicon.ico'/>
             </Head>
-            <h1 className="text-4xl font-bold sm:text-6xl">
+            <h1 className="text-4xl font-bold sm:text-3xl">
                 총 프로젝트 : 
-                <span className="pl-4 text-blue-500">{projects.results.length}</span>
+                <span className="pl-4 text-orange-300">{projects.results.length}</span>
                 </h1>
             <div className="grid grid-cols-1 md:grid-cols-2 py-10 m-6 gap-8">
             {projects.results.map((aProject)=>(
