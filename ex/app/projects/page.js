@@ -5,7 +5,7 @@ import ProjectItem from '@/components/projects/project-item'
 
 export default async function Projects(){
     const projects = await StaticData()
-    console.log(projects.results[0])
+    // console.log(projects.results[0])
     return(
         <Layout>
             <div className='flex flex-col items-conter justify-center min-h-screen px-5 mb-10'>
