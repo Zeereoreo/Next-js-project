@@ -1,5 +1,5 @@
 import Layout from "@/components/layout";
-import Head from "next/head";
+import Link from "next/link";
 import GitHub from "@/components/Home/gitHub";
 
 export default function AboutMe(){
@@ -40,6 +40,9 @@ export default function AboutMe(){
                     <br className="lg:inline-block"/>
                         이 곳 또한, Next.js를 활용하였고, 현재 진행 중인 것은 typescript로 진행하고 있으며 기대해주세요😃
                     </p>
+                    <div className="flex justify-center">
+                <Link href='/projects' className="btn-project">프로젝트 보러가기</Link>
+                </div>
         </section>
         <GitHub></GitHub>
         </Layout>
