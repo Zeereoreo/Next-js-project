@@ -20,7 +20,6 @@ export default function Hero(){
                 <div className="flex justify-center">
                 <Link href='/projects' className="btn-project">프로젝트 보러가기</Link>
                 </div>
-                <GitHub></GitHub>
             </div>
             <div className="lg:max-w-lg lg:w-full md:w-1/2 w-5/6">
             <Animation></Animation>

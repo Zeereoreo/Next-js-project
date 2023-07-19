@@ -1,14 +1,10 @@
 import Layout from "@/components/layout";
 import Head from "next/head";
+import GitHub from "@/components/Home/gitHub";
 
 export default function AboutMe(){
     return (
         <Layout>
-        <Head>
-        <title>포트폴리오</title>
-        <meta name='description' content='오늘도 화이팅'/>
-        <link rel='icon' href='/favicon.ico'/>
-        </Head>
             <section className="flex min-h-screen flex-col items-center justify-center text-gray-600 body-font">
             <h1 className="title-font sm:text-4xl text-3xl mb-4 font-medium text-gray-900">&quot;서비스&quot;의 본질을 잘 알고 있습니다.
                 <br className="hidden lg:inline-block"/>
@@ -45,6 +41,7 @@ export default function AboutMe(){
                         이 곳 또한, Next.js를 활용하였고, 현재 진행 중인 것은 typescript로 진행하고 있으며 기대해주세요😃
                     </p>
         </section>
+        <GitHub></GitHub>
         </Layout>
     )
 }
