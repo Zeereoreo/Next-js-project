@@ -20,7 +20,11 @@ export default function Hero(){
                 <div className="flex justify-center">
                 <Link href='/projects' className="btn-project">프로젝트 보러가기</Link>
                 </div>
+                <div className="flex justify-center mt-5">
+                <Link href='/aboutme' className="btn-project">자기소개 보러가기</Link>
+                </div>
             </div>
+            
             <div className="lg:max-w-lg lg:w-full md:w-1/2 w-5/6">
             <Animation></Animation>
             </div>
