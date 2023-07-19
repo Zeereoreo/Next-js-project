@@ -44,7 +44,6 @@ export default function AboutMe(){
                 <Link href='/projects' className="btn-project">프로젝트 보러가기</Link>
                 </div>
         </section>
-        <GitHub></GitHub>
         </Layout>
     )
 }
