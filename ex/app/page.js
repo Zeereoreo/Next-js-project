@@ -4,7 +4,7 @@ import Hero from '@/components/Home/hero'
 
 
 export default function Home() {
-  return (
+  return ( 
     <Layout>
       <Head>
         <title>포트폴리오</title>
