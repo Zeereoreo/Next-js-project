@@ -10,7 +10,7 @@ export default function ProjectItem({data}){
     const tags = data.properties.Skill.multi_select
     const start = data.properties.WorkPeriod.date.start
     const end = data.properties.WorkPeriod.date.end
-    const url = data.url
+    const url = `https://boundless-handspring-fb0.notion.site/3-375df62dd6a94dbc8cd73c92cc866e95?pvs=4`
 
     const calculatedPeriod = (start, end) => {
         const startDateStringArray = start.split('-');
