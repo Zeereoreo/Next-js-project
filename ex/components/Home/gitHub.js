@@ -16,7 +16,7 @@ export default function GitHub() {
     //     return contributions.filter((day) => {
     //         const date = new Date(day.date);
     //         const monthOfDay = date.getMonth();
-        
+
     //         // 현재 날짜가 6월~12월 사이인 경우
     //         if (currentMonth >= 5)
     //             return (
@@ -24,7 +24,7 @@ export default function GitHub() {
     //             monthOfDay > currentMonth - shownMonths &&
     //             monthOfDay <= currentMonth
     //             );
-        
+
     //         // 현재 날짜가 1월~5월인 경우
     //         return (
     //             // 올해
